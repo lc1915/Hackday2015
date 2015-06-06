@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/Hackday2015.iml" filepath="$PROJECT_DIR$/Hackday2015.iml" />
       <module fileurl="file://$PROJECT_DIR$/accessibilityservice/accessibilityservice.iml" filepath="$PROJECT_DIR$/accessibilityservice/accessibilityservice.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sendnotification/sendnotification.iml" filepath="$PROJECT_DIR$/sendnotification/sendnotification.iml" />
       <module fileurl="file://$PROJECT_DIR$/sendnotifications/sendnotifications.iml" filepath="$PROJECT_DIR$/sendnotifications/sendnotifications.iml" />
     </modules>
   </component>
