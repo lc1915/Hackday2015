@@ -16,4 +16,4 @@
         android:id="@+id/new_button1"
         android:layout_gravity="center_horizontal" />
 
-</LinearLayout>  <!-- From: file:/home/liuchang/AndroidStudioProjects/Hackday2015/sendnotification/src/main/res/layout/notification.xml -->
+</LinearLayout>  <!-- From: file:/Users/shenvsv/Documents/android/github/hackday/Hackday2015/sendnotification/src/main/res/layout/notification.xml -->

@@ -1,17 +1,45 @@
 package unique.liuchang.accessibilityservice;
 
 import android.accessibilityservice.AccessibilityService;
+import android.accessibilityservice.AccessibilityServiceInfo;
 import android.annotation.SuppressLint;
 import android.app.Notification;
 import android.app.PendingIntent;
+import android.bluetooth.BluetoothAdapter;
+import android.content.BroadcastReceiver;
+import android.content.ComponentName;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
+import android.media.AudioManager;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.accessibility.AccessibilityEvent;
 import android.view.accessibility.AccessibilityNodeInfo;
+import android.widget.Toast;
 
 import java.util.List;
 
 public class MyAccessibilityService extends AccessibilityService {
+    private Context mContext;
+
+    @Override
+    protected void onServiceConnected() {
+        Log.i("demo", "demo service success!");
+        mContext = this;
+        addReceiver();
+    }
+
+    private void addReceiver(){
+        IntentFilter filter = new IntentFilter();
+        filter.addAction("unique.liuchang.action.on");
+        this.registerReceiver(new BroadcastReceiver() {
+            @Override
+            public void onReceive(Context context, Intent intent) {
+                Log.i("demo service","demo "+intent.getAction());
+            }
+        }, filter);
+    }
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {

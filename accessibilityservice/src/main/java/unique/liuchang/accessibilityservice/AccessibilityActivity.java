@@ -28,6 +28,7 @@ public class AccessibilityActivity extends Activity {
                 startActivity(intent);
             }
         });
+
         ((AudioManager)getSystemService(AUDIO_SERVICE)).registerMediaButtonEventReceiver(new ComponentName(
                 this,
                 MyButtonIntentReceiver.class));
