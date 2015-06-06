@@ -1,7 +1,9 @@
 package unique.liuchang.accessibilityservice;
 
 import android.app.Activity;
+import android.content.ComponentName;
 import android.content.Intent;
+import android.media.AudioManager;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -26,6 +28,9 @@ public class AccessibilityActivity extends Activity {
                 startActivity(intent);
             }
         });
+        ((AudioManager)getSystemService(AUDIO_SERVICE)).registerMediaButtonEventReceiver(new ComponentName(
+                this,
+                MyButtonIntentReceiver.class));
     }
 
 
